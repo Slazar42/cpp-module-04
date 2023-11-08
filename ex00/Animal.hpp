@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 08:18:59 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/06 08:24:17 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/07 01:36:13 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 
 class Animal{
-	private :
+	protected :
 		std::string type;
 	public :
 		Animal();
@@ -24,6 +24,9 @@ class Animal{
 		Animal(const Animal &original);
 		Animal &operator=(const Animal &original);
 		~Animal();
-};
+		std::string getType() const;
+		virtual void makeSound() const;
+		};
 
 #endif
+
