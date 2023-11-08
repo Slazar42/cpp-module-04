@@ -6,18 +6,17 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 17:42:39 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/08 17:43:20 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/08 18:56:26 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WRONGCAT_HPP
 # define WRONGCAT_HPP
 # include <iostream>
+# include "WrongAnimal.hpp"
 
-class WrongCat
+class WrongCat : public WrongAnimal
 {
-	private:
-		std::string type;
 	public:
 		WrongCat();
 		WrongCat(std::string tp);

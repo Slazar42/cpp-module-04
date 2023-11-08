@@ -6,18 +6,19 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:08:25 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/07 01:36:14 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/08 18:59:10 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main(){
-	const Animal* meta = new Animal("salah");
-	const Animal* j = new Dog("chiba");
-	const Animal* i = new Cat("khalil");
+	const Animal* j = new Dog("Malinois");
+	const Animal* i = new Cat("siam");
+	const Animal* meta = new Animal("bo3o");
 	
 	std::cout << std::endl;
 	std::cout << "meta->getType() : " << meta->getType() << std::endl;
@@ -29,8 +30,8 @@ int main(){
 	j->makeSound();
 	meta->makeSound();
 	std::cout << std::endl;
-	
-// 	delete meta;
-// 	delete j;
-// 	delete i;
+
+	delete meta;
+	delete j;
+	delete i;
 }
