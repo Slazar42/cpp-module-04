@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 08:24:27 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/08 17:34:27 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/08 17:51:04 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Animal::Animal()
 {
 	std::cout << "Animal constructor called with default type : Animal" << std::endl;
-	type = "Animal";
+	type = "no type";
 }
 
 Animal::Animal(std::string tp)

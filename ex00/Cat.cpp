@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:03:12 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/08 17:34:01 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/08 17:50:29 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat()
 {
 	std::cout << "Cat constructor called with default type : Cat" << std::endl;
-	type = "Cat";
+	type = "no type";
 }
 Cat::Cat(std::string tp) : Animal(tp)
 {
