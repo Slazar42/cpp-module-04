@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 08:18:59 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/08 18:38:40 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/10 14:42:42 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ class Animal{
 		std::string type;
 	public :
 		Animal();
-		Animal(std::string type);
 		Animal(const Animal &original);
 		Animal &operator=(const Animal &original);
 		virtual ~Animal();

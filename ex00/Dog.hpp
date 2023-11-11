@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 08:21:08 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/06 10:51:42 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/10 14:43:13 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class Dog: public Animal{
 	public :
 		Dog();
-		Dog(std::string type);
 		Dog(const Dog &original);
 		Dog &operator=(const Dog &original);
 		~Dog();

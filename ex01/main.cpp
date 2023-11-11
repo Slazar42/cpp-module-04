@@ -6,32 +6,40 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:08:25 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/10 15:02:05 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/10 18:15:29 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main(){
-	const Animal* j = new Dog();
-	const WrongAnimal* i = new WrongCat();
-	const Animal* meta = new Animal();
-	
+	const Animal *Animals[6];
 	std::cout << std::endl;
-	std::cout << "meta->getType() : " << meta->getType() << std::endl;
-	std::cout << "j->getType() : " << j->getType() << std::endl;
-	std::cout << "i->getType() : " << i->getType() << std::endl;
+	for(int i = 0; i < 6; i++){
+		if (i < 3){
+			Animals[i] = new Dog();
+			
+		}
+		else
+			Animals[i] = new Cat();
+	}
 	std::cout << std::endl;
-	
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	for(int i = 0; i < 6; i++){
+		Animals[i]->makeSound();
+	}
 	std::cout << std::endl;
-
-	delete meta;
-	delete j;
-	delete i;
+	for(int i = 0; i < 6; i++){
+		delete Animals[i];
+	}
+	std::cout << std::endl;
+	Cat *cat1 = new Cat();
+	cat1->getBrain().setIdea(0, "Idea 0");
+	Cat *cat2 = new Cat(*cat1);
+	delete cat1;
+	std::cout << "cat2->getBrain().getIdea(0) : " << cat2->getBrain().getIdea(0) << std::endl;
+	delete cat2;
+	// system("leaks Brain");
 }

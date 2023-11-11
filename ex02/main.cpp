@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:08:25 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/10 15:02:05 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/11 10:06:02 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 #include "WrongCat.hpp"
 
 int main(){
-	const Animal* j = new Dog();
+	const Dog* j = new Dog();
+	// const Animal* w = new Animal();
+	// (void)w;
 	const WrongAnimal* i = new WrongCat();
-	const Animal* meta = new Animal();
+	const Cat* meta = new Cat();
 	
 	std::cout << std::endl;
 	std::cout << "meta->getType() : " << meta->getType() << std::endl;
@@ -29,9 +31,11 @@ int main(){
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
+	// w->makeSound();
 	std::cout << std::endl;
 
 	delete meta;
 	delete j;
 	delete i;
+	// system("leaks Brain");
 }

@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 08:24:27 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/10 15:01:18 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/10 18:22:19 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Animal::Animal(const Animal &original)
 
 Animal &Animal::operator=(const Animal &obj)
 {
-	std::cout << "Animal assignation operator called to assign from this type : " << obj.type << std::endl;
+	std::cout << "Animal assignation operator called to assign from this tpe : " << obj.type << std::endl;
 	if (this != &obj)
 		type = obj.type;
 	return (*this);
@@ -40,9 +40,4 @@ Animal::~Animal()
 std::string Animal::getType() const
 {
 	return (type);
-}
-
-void Animal::makeSound() const
-{
-	std::cout << "Animal type : " << type << " makes a sound" << std::endl;
 }

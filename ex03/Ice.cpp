@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 17:45:11 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/10 15:00:13 by slazar           ###   ########.fr       */
+/*   Created: 2023/11/11 09:46:17 by slazar            #+#    #+#             */
+/*   Updated: 2023/11/11 10:09:08 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#include "Ice.hpp"
 
-# include <iostream>
-
-class WrongAnimal
+Ice::Ice(void) : AMateria("ice")
 {
-	protected :
-		std::string type;
-	public :
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal &obj);
-		WrongAnimal &operator=(const WrongAnimal &obj);
-		~WrongAnimal();
-		void makeSound() const;
-		std::string getType() const;
-};
+}
 
-#endif
+Ice::Ice(const Ice &copy) : AMateria(copy)
+{
+}
+
+Ice::~Ice(void)
+{
+}
+
+Ice		&Ice::operator=(const Ice &obj)
+{
+	if (this != &obj)
+		this->_type = obj._type;
+	return (*this);
+}
+
+AMateria* Ice::clone() const
+{
+	return (new Ice(*this));
+}
+
+void Ice::use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}
+

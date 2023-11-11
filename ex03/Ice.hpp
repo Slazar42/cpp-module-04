@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 10:55:08 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/10 14:43:03 by slazar           ###   ########.fr       */
+/*   Created: 2023/11/11 09:46:20 by slazar            #+#    #+#             */
+/*   Updated: 2023/11/11 09:50:40 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
-#include "Animal.hpp"
+#include "AMateria.hpp"
 
-class Cat: public Animal{
-	public :
-		Cat();
-		Cat(const Cat &original);
-		Cat &operator=(const Cat &original);
-		~Cat();
-		void makeSound() const;
-		std::string getType() const;
+class Ice : public AMateria
+{
+	public:
+		Ice(void);
+		Ice(const Ice &original);
+		virtual ~Ice(void);
+		Ice	&operator=(const Ice &original);
+		AMateria* clone(void) const;
+		void use(ICharacter& target);
 };
 
 #endif
