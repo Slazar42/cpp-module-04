@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 09:46:29 by slazar            #+#    #+#             */
-/*   Updated: 2023/11/11 11:52:21 by slazar           ###   ########.fr       */
+/*   Updated: 2023/11/12 02:38:26 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	test()
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-	
+	// me->unequip(0);
 	ICharacter* bob = new Character("bob");
 	
 	me->use(0, *bob);
@@ -39,9 +39,10 @@ void	test()
 	delete src;
 }
 
-int main()
-{
+int main(){
+	std::cout << std::endl;
 	test();
-	system("leaks -q materia");
+	std::cout << std::endl;
+	// system("leaks -q materia");
 	return 0;
 }
